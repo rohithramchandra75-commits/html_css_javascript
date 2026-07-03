@@ -1,0 +1,92 @@
+/*index.html*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px;
+    background-color: rgba(243,241,241);
+}
+
+header{
+    background-color: purple;
+    text-align: center;
+    color:white;
+    padding:20px;
+}
+
+nav{
+    background-color:rgba(136,136,156);
+    text-align: center;
+    padding:10px;
+}
+
+nav a{
+    text-align: center;
+    color:white;
+    margin: 10px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color:deepskyblue;
+}
+
+
+.container {
+    width: 400px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* FORM STYLING (Register Page) */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darkmagenta;
+}
+
+/* TASK PAGE */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

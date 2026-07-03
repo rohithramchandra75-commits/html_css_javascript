@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Input Example</title>
+</head>
+<body>
+
+    <h2>Enter Your Details</h2>
+
+    <form onsubmit="return validateForm()">
+        Name: <br>
+        <input type="text" id="name"><br><br>
+
+        Email: <br>
+        <input type="text" id="email"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message");
+
+            // Check if fields are empty
+            if (name === "" || email === "") {
+                message.innerHTML = "All fields are required!";
+                message.style.color = "red";
+                return false;
+            }
+
+            // Simple email validation
+            if (!email.includes("@") || !email.includes(".")) {
+                message.innerHTML = "Enter a valid email address!";
+                message.style.color = "red";
+                return false;
+            }
+
+            // Success message
+            message.innerHTML = "Form submitted successfully ✅";
+            message.style.color = "green";
+
+            return false; // prevent actual form submission (for demo)
+        }
+    </script>
+
+</body>
+</html>

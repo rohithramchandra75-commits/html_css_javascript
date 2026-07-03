@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Function Example</title>
+</head>
+<body>
+
+    <h2>Fetch Data Example</h2>
+    <button onclick="getData()">Get Data</button>
+
+    <script>
+        async function getData() {
+            try {
+                // Example API (free test API)
+                let response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+                
+                let result = await response.json();
+
+                // Print result in console
+                console.log(result);
+
+                alert("Check console for output!");
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        }
+    </script>
+
+</body>
+</html>

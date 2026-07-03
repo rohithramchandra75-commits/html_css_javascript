@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener + Async Example</title>
+</head>
+<body>
+
+    <h2>Event Listener Demo</h2>
+
+    <!-- Button for async function -->
+    <button id="btn">Get Data</button>
+
+    <p id="output">Press a key or click anywhere...</p>
+
+    <script>
+        // -------------------------
+        // ASYNC FUNCTION
+        // -------------------------
+        async function getData() {
+            try {
+                let response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+                let result = await response.json();
+
+                console.log(result); // required output
+                alert("Data fetched! Check console.");
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        }
+
+        // Button click event
+        document.getElementById("btn").addEventListener("click", getData);
+
+        // -------------------------
+        // KEYBOARD EVENT
+        // -------------------------
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("output").innerHTML =
+                "Key pressed: " + event.key;
+        });
+
+        // -------------------------
+        // MOUSE EVENTS
+        // -------------------------
+        document.addEventListener("click", function(event) {
+            console.log("Mouse clicked at X:", event.clientX, "Y:", event.clientY);
+        });
+
+        document.addEventListener("mousemove", function(event) {
+            console.log("Mouse moving at:", event.clientX, event.clientY);
+        });
+
+    </script>
+
+</body>
+</html>
